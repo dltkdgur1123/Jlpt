@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 
 const displayFont = Space_Grotesk({
   variable: "--font-display",
@@ -29,5 +28,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-initOpenNextCloudflareForDev();
