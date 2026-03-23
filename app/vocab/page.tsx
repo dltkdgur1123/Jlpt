@@ -44,10 +44,10 @@ export default async function VocabPage({ searchParams }: VocabPageProps) {
         </section>
 
         <div className="inline-action-row">
-          <Link href={`/quiz?level=${level}`} className="button-primary">
+          <Link href={`/quiz?level=${level}`} prefetch={false} className="button-primary">
             {level} 퀴즈 풀기
           </Link>
-          <Link href={`/progress?level=${level}`} className="button-secondary">
+          <Link href={`/progress?level=${level}`} prefetch={false} className="button-secondary">
             {level} 진행도 보기
           </Link>
         </div>

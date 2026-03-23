@@ -27,7 +27,7 @@ export function AppShell({ children, currentLevel }: AppShellProps) {
   return (
     <div className="app-shell">
       <header className="topbar">
-        <Link href="/" className="brand">
+        <Link href="/" prefetch={false} className="brand">
           <span className="brand-mark">JLPT</span>
           <div>
             <p className="eyebrow">일본어 시험 학습 시스템</p>
@@ -39,6 +39,7 @@ export function AppShell({ children, currentLevel }: AppShellProps) {
             <Link
               key={item.href}
               href={withLevel(item.href, currentLevel)}
+              prefetch={false}
               className="nav-link"
             >
               {item.label}

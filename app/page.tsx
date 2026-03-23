@@ -18,10 +18,10 @@ export default async function Home() {
             {level} {getLevelLabel(level)} 단계에 맞춰 학습 화면이 간소화되어 있습니다.
           </p>
           <div className="hero-actions">
-            <Link href={`/vocab?level=${level}`} className="button-primary">
+            <Link href={`/vocab?level=${level}`} prefetch={false} className="button-primary">
               {level} 단어 학습
             </Link>
-            <Link href="/settings" className="button-secondary">
+            <Link href="/settings" prefetch={false} className="button-secondary">
               설정 바꾸기
             </Link>
           </div>
@@ -48,13 +48,13 @@ export default async function Home() {
           <h3>{getLevelLabel(level)}</h3>
           <p>{levelContent.summary}</p>
           <div className="card-actions">
-            <Link href={`/vocab?level=${level}`} className="text-link">
+            <Link href={`/vocab?level=${level}`} prefetch={false} className="text-link">
               단어
             </Link>
-            <Link href={`/quiz?level=${level}`} className="text-link">
+            <Link href={`/quiz?level=${level}`} prefetch={false} className="text-link">
               퀴즈
             </Link>
-            <Link href={`/progress?level=${level}`} className="text-link">
+            <Link href={`/progress?level=${level}`} prefetch={false} className="text-link">
               진행도
             </Link>
           </div>
@@ -68,7 +68,12 @@ export default async function Home() {
             <h2>{level} 학습 카드 구성</h2>
           </div>
           <div className="list-panel">
-            <Link key={level} href={`/vocab?level=${level}`} className="list-row list-link">
+            <Link
+              key={level}
+              href={`/vocab?level=${level}`}
+              prefetch={false}
+              className="list-row list-link"
+            >
               <div>
                 <h3>
                   {level} · {levelContent.title}
