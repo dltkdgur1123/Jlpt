@@ -34,7 +34,7 @@ export default async function Home() {
             <span style={{ width: `${(studyStats.completedToday / studyStats.todayGoal) * 100}%` }} />
           </div>
           <p className="muted">
-            목표 {studyStats.todayGoal}개 · 연속 {studyStats.streakDays}일
+            목표! {studyStats.todayGoal}개 · 연속 {studyStats.streakDays}일
           </p>
         </div>
       </section>
