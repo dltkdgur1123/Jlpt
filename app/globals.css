@@ -10,6 +10,8 @@
   --accent-dark: #a2471d;
   --forest: #315c4f;
   --shadow: 0 24px 60px rgba(84, 57, 22, 0.12);
+  --font-display: "Trebuchet MS", "Avenir Next", "Segoe UI", sans-serif;
+  --font-body: "Hiragino Sans", "Yu Gothic", "Noto Sans CJK JP", "Malgun Gothic", sans-serif;
 }
 
 html {
