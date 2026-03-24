@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AppShell } from "../components/app-shell";
+import { JapaneseText } from "../components/japanese-text";
 import { getLevelLabel, studyContentByLevel, studyStats } from "../data/jlpt";
 import { getPreferredLevel } from "../lib/level-preference";
 
@@ -95,6 +96,9 @@ export default async function Home() {
           <article className="study-card">
             <h3>{levelContent.grammar[0].pattern}</h3>
             <p>{levelContent.grammar[0].meaning}</p>
+            <p className="flash-example">
+              <JapaneseText annotatedText={levelContent.grammar[0].exampleFurigana} />
+            </p>
             <p className="muted">{levelContent.grammar[0].exampleTranslation}</p>
           </article>
         </div>
